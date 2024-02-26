@@ -12,7 +12,7 @@ This project involves building and training a neural network to recognize handwr
 - **`weights_and_biases` Folder:** Stores the weights and biases of the model after being trained.
 
 ## How to Use the Code
-1. Make sure you are using 'python3'
+1. Make sure you are using python3
 2. Download the MNIST dataset from [Kaggle](https://www.kaggle.com/datasets/oddrationale/mnist-in-csv).
 3. Save the dataset in the working directory under "mnist_train.csv" and "mnist_test.csv".
 4. Install the required dependencies using the following command:
