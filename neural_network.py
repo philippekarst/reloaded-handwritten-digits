@@ -76,8 +76,8 @@ class NeuralNetwork:
             for j in range(len(input_batches)):
                 self.gradient_descenct(input_batches[j], target_batches[j], alpha, 1)
                 if i % 10 == 0 and j == 0:
-                    print(f"iteration {i}:")
-                    self.test_network(input_batches[j], target_batches[j])
+                    print(f"Iteration {i}:")
+                    print(f'The accuracy on the training data is {self.test_network(input_batches[j], target_batches[j])}')
         
     def sigmoid(self, x): #we use the sigmoid as activation function for all layers
         return 1 / (1 + np.exp(-x))
@@ -103,4 +103,4 @@ class NeuralNetwork:
         for i in range(len(predictions)):
             if predictions[i] == targets[i]:
                 k = k+1 #we count the number of correct predictions
-        print(f'the accuracy on the testing data is {k/len(targets)}')
+        return f'{k/len(targets)}'

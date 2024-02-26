@@ -6,8 +6,8 @@ import sys
 
 #load the data
 def load_mnist():
-    df_train = pd.read_csv(r".\mnist_train.csv")
-    df_test = pd.read_csv(r"C:.\mnist_test.csv")
+    df_train = pd.read_csv("mnist_train.csv")
+    df_test = pd.read_csv("mnist_test.csv")
     df_train = pd.DataFrame(df_train).to_numpy() #shape is (60000,785) 60000 pictures, 1 label + 28x28 pixels, every row is a label together with 784 pixels that make up the image
     df_test = pd.DataFrame(df_test).to_numpy() #shape is (10000,785) 10000 pictures, 1 label + 28x28 pixels
     return df_train, df_test
@@ -29,7 +29,7 @@ def preprocess_data(df_train, df_test):
 
 #load model
 def load_model():
-    directory = 'weights_and_biases/'
+    directory = 'weights_and_biases'
     weights = []
     biases = []
     for filename in os.listdir(directory):
@@ -53,7 +53,7 @@ def save_model():
 
 #load the own handwritten digits
 def load_pics():
-    pic = pd.read_csv(r".\pics.csv", header=None)
+    pic = pd.read_csv("pics.csv", header=None)
     pic = pd.DataFrame(pic).to_numpy().transpose()
     labels = pic[:,0]
     pics = pic[:,1:]/255
@@ -122,7 +122,7 @@ def test_or_train_nn(X_train_batches, Y_train_batches, X_test, Y_test, user_inpu
         model.SGD(X_train_batches, Y_train_batches, learning_rate, iterations)
         save_model()
         print("The model has finished training and has been saved.")
-        model.test_network(X_test, Y_test)
+        print(f'The accuracy on the testing data is {model.test_network(X_test, Y_test)}')
         
 # Check if the dataset files exist in the working directory
 if not (os.path.isfile("mnist_train.csv") and os.path.isfile("mnist_test.csv")):

@@ -12,13 +12,14 @@ This project involves building and training a neural network to recognize handwr
 - **`weights_and_biases` Folder:** Stores the weights and biases of the model after being trained.
 
 ## How to Use the Code
-1. Download the MNIST dataset from [Kaggle](https://www.kaggle.com/datasets/oddrationale/mnist-in-csv).
-2. Save the dataset in the working directory under "mnist_train.csv" and "mnist_test.csv".
-3. Install the required dependencies using the following command:
+1. Make sure you are using 'python3'
+2. Download the MNIST dataset from [Kaggle](https://www.kaggle.com/datasets/oddrationale/mnist-in-csv).
+3. Save the dataset in the working directory under "mnist_train.csv" and "mnist_test.csv".
+4. Install the required dependencies using the following command:
     ```
     pip install -r requirements.txt
     ```
-3. Run `main.py` and follow the instructions in the terminal.
+5. Run `main.py` and follow the instructions in the terminal.
 
 **Note:** Adjusting the number of neurons and hidden layers is not yet possible via user input. However, it can be easily done by modifying the function `create_nn` in `main.py`.
 
