@@ -2,3 +2,5 @@ mnist_test.csv
 mnist_train.csv
 __pycache__
 pics
+convert_pics_to_csv.py
+pics.csv

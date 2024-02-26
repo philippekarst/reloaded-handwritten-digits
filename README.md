@@ -6,10 +6,12 @@ The repository contains:
 -testing data
     this is needed to test the model
 -two python scripts
-    main.py contains the NeuralNetwork class containig all necessary methods to instantiate, train and test the neural network object
-    trainandsavemodel.py contains all the code for calling the methods to actually train and save the model. It loads the training and testing data aswell as previously trained weights and biases
+    neural_network.py contains the NeuralNetwork class containig all necessary methods to instantiate, train and test the neural network object
+    main.py contains all the code for experimenting with the neural network, that is training, saving, testing, adjusting hyperparameters, etc..
 -the folder 'weights_and_biases'
     this folder stores the weights and biases of the model after being trained
 
 How to use the code:
-It is possible to use the code, that is train the network, adjust prameters such as learning rate, the number of hidden layers, or the number of neurons per layer. For that you only need to modify and/or run the 'trainandsavemodel.py' script. When instantiating the model you can choose to load in the weights and biases that have previously been trained or you can disregard these parameters to initialise the model with random weights and biases. Saving the model will overwrite the weights and biases stored previously.
+First download the Mnist dataset from "https://www.kaggle.com/datasets/oddrationale/mnist-in-csv" and save it in the working directory under "mnist_train.csv" and "mnist_test.csv".
+Simply run main.py and follow the instructions in the terminal.
+Adjusting number of neurons and number of hidden layers is not yet possible via user input. However, it can easily be done by modifying the function "create_nn" in main.py.

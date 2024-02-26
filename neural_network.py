@@ -103,4 +103,4 @@ class NeuralNetwork:
         for i in range(len(predictions)):
             if predictions[i] == targets[i]:
                 k = k+1 #we count the number of correct predictions
-        print(f'the accuracy is {k/len(targets)}')
+        print(f'the accuracy on the testing data is {k/len(targets)}')
